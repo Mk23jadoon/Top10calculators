@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator Site Map - All Financial, Health & Math Tools | Top10Calculators</title>
+    <meta name="description" content="Complete site map of all calculators - mortgage, loan, investment, tax, retirement, BMI, math calculators and more. Find any calculator quickly.">
+    <meta name="keywords" content="calculator sitemap, financial calculators, mortgage calculators, loan calculators, tax calculators, retirement calculators, health calculators">
+    <meta name="author" content="Top10Calculators">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://top10calculators.com/sitemapcalc.html">
+    <meta property="og:title" content="Complete Calculator Site Map - All Financial & Math Tools">
+    <meta property="og:description" content="Browse our complete collection of calculators for finance, health, math, and everyday calculations.">
+    <meta property="og:image" content="https://top10calculators.com/images/og-image.png">
+    <meta property="og:site_name" content="Top10Calculators">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Complete Calculator Site Map - All Financial & Math Tools">
+    <meta name="twitter:description" content="Browse our complete collection of calculators for finance, health, math, and everyday calculations.">
+    <meta name="twitter:image" content="https://top10calculators.com/images/twitter-image.png">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://top10calculators.com/sitemapcalc.html">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/logo32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
+          integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" 
+          crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="preload" href="calculator.js" as="script">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+
+
+
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-1665YE8BPB"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-1665YE8BPB');
+</script>
+
+
+    
+    <style>
+        :root {
+            /* Color Scheme */
+            --primary-bg: #fafaeb;
+            --container-bg: #e8e0d0;
+            --display-bg: #d0d0c8;
+            --button-bg: #d8d0c0;
+            --button-hover: #c8c0b0;
+            --operator-bg: #4a6572;
+            --operator-hover: #3a5562;
+            --function-bg: #3a5562;
+            --function-hover: #2a4552;
+            --clear-bg: #D86A26; 
+            --clear-hover: #BB6533;
+            --ad-bg: linear-gradient(to right, #e0e0d8, #d0d0c8);
+            --ad-unit-bg: linear-gradient(to bottom, #f0f0e8, #e8e8e0);
+            --category-bg: linear-gradient(to bottom, #f5f5ed, #e8e8e0);
+           
+            /* Text Colors */
+            --text-primary: #333;
+            --text-dark: #1a3a2a;
+            --text-medium: #3a5562;
+            --text-light: #7a7a72;
+            --text-white: white;
+           
+            /* Borders */
+            --border-light: #d8d0c0;
+            --border-medium: #c8c0b0;
+            --border-dark: #8f8f75;
+           
+            /* Sizes and Spacing */
+            --border-radius: 12px;
+            --border-radius-sm: 8px;
+            --shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            --shadow-sm: 0 4px 8px rgba(0, 0, 0, 0.08);
+        }
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: var(--primary-bg);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: var(--container-bg);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+        }
+        
+        header {
+            background-color: var(--container-bg);
+            box-shadow: var(--shadow-sm);
+            padding: 15px 0;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo h1 {
+            color: var(--text-medium);
+            font-size: 24px;
+            margin-left: 10px;
+        }
+        
+        .logo-icon {
+            color: var(--operator-bg);
+            font-size: 28px;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 20px;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: var(--text-medium);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        nav ul li a:hover {
+            color: var(--operator-hover);
+        }
+        
+        .page-title {
+            text-align: center;
+            margin: 30px 0;
+            color: var(--text-medium);
+        }
+        
+        .page-title h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+        
+        .page-title p {
+            color: var(--text-light);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .sitemap-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+        
+        .category-card {
+            background: var(--category-bg);
+            border-radius: var(--border-radius-sm);
+            box-shadow: var(--shadow-sm);
+            padding: 25px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 1px solid var(--border-light);
+        }
+        
+        .category-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow);
+        }
+        
+        .card-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid var(--operator-bg);
+        }
+        
+        .card-icon {
+            background-color: rgba(42, 157, 143, 0.1);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+        }
+        
+        .card-icon i {
+            color: var(--operator-bg);
+            font-size: 20px;
+        }
+        
+        .card-header h3 {
+            color: var(--text-medium);
+            font-size: 20px;
+        }
+        
+        .calculator-list {
+            list-style: none;
+        }
+        
+        .calculator-list li {
+            margin-bottom: 12px;
+            padding-left: 10px;
+            border-left: 2px solid transparent;
+            transition: border-color 0.3s;
+        }
+        
+        .calculator-list li:hover {
+            border-left-color: var(--operator-bg);
+        }
+        
+        .calculator-list a {
+            text-decoration: none;
+            color: var(--text-primary);
+            display: flex;
+            align-items: center;
+            transition: color 0.3s;
+        }
+        
+        .calculator-list a:hover {
+            color: var(--operator-bg);
+        }
+        
+        .calculator-list i {
+            margin-right: 10px;
+            font-size: 14px;
+            color: var(--operator-bg);
+        }
+        
+        .popular-section {
+            margin-top: 60px;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 30px;
+            color: var(--text-medium);
+        }
+        
+        .popular-calculators {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        
+        .popular-item {
+            background: var(--ad-unit-bg);
+            border-radius: var(--border-radius-sm);
+            box-shadow: var(--shadow-sm);
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s;
+            border: 1px solid var(--border-light);
+        }
+        
+        .popular-item:hover {
+            transform: translateY(-3px);
+        }
+        
+        .popular-item i {
+            font-size: 32px;
+            color: var(--operator-bg);
+            margin-bottom: 15px;
+        }
+        
+        .popular-item h4 {
+            margin-bottom: 10px;
+            color: var(--text-medium);
+        }
+        
+        .popular-item a {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 8px 15px;
+            background-color: var(--operator-bg);
+            color: var(--text-white);
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 14px;
+            transition: background-color 0.3s;
+        }
+        
+        .popular-item a:hover {
+            background-color: var(--operator-hover);
+        }
+        
+    
+        
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            nav ul {
+                margin-top: 15px;
+                justify-content: center;
+            }
+            
+            nav ul li {
+                margin: 0 10px;
+            }
+            
+            .sitemap-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Accessibility */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 6px;
+            background: #000;
+            color: white;
+            padding: 8px;
+            z-index: 100;
+            text-decoration: none;
+        }
+        
+        .skip-link:focus {
+            top: 6px;
+        }
+        
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Skip to Main Content for Accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header role="banner">
+        <div class="header-content">
+            <div class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-calculator" aria-hidden="true"></i>
+                </div>
+                <h1>Top 10 Calculators</h1>
+            </div>
+            <nav aria-label="Main Navigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="sitemapcalc.html">Calculators</a></li>
+                    <li><a href="https://calculate.lt/" rel="noopener">Blog</a></li>
+                    <li><a href="aboutuscalc.html">About</a></li>
+                    <li><a href="feedbackform.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content" role="main">
+        <div class="container">
+            <div class="page-title">
+                <h1>Complete Calculator Site Map</h1>
+                <p>Browse our complete collection of calculators for finance, health, math, and everyday calculations</p>
+            </div>
+
+            <div class="sitemap-grid">
+                <div class="category-card">
+                    <div class="card-header">
+                        <div class="card-icon">
+                            <i class="fas fa-piggy-bank" aria-hidden="true"></i>
+                        </div>
+                        <h2>Retirement Calculators</h2>
+                    </div>
+                    <ul class="calculator-list">
+                        <li><a href="calculators/retirementcalc.html"><i class="fas fa-arrow-right" aria-hidden="true"></i> Retirement Savings Calculator</a></li>
+                        <li><a href="landingpage404.html"><i class="fas fa-arrow-right" aria-hidden="true"></i> 401(k) Calculator</a></li>
+                        <li><a href="landingpage404.html"><i class="fas fa-arrow-right" aria-hidden="true"></i> IRA Calculator</a></li>
+                        <li><a href="calculators/retirementcalc.html"><i class="fas fa-arrow-right" aria-hidden="true"></i> Retirement Income Calculator</a></li>
+                        <li><a href="landingpage404.html"><i class="fas fa-arrow-right" aria-hidden="true"></i> Social Security Calculator</a></li>
+                    </ul>
+                </div>
+
+                <div class="category-card">
+                    <div class="card-header">
+                        <div class="card-icon">
+                            <i class="fas fa-file-invoice-dollar" aria-hidden="true"></i>
+                        </div>
+                        <h2>Tax Calculators</h2>
+                    </div>
+                    <ul class="calculator-list">
+                        <li><a href="calculators/incomtcalc.html"><i class="fas fa-arrow-right" aria-hidden="true"></i> Income Tax Calculator</a></li>
+                        <li><a href="landingpage404.html"><i class="fas fa-arrow-right" aria-hidden="true"></i> Tax Refund Calculator</a></li>
+                        <li><a href="landingpage404.html"><i class="fas fa-arrow-right" aria-hidden="true"></i> Capital Gains Tax Calculator</a></li>
+                        <li><a href="landingpage404.html"><i class="fas fa-arrow-right" aria-hidden="true"></i> Self-Employment Tax Calculator</a></li>
+                        <li><a href="landingpage404.html"><i class="fas fa-arrow-right" aria-hidden="true"></i> Property Tax Calculator</a></li>
+                    </ul>
+                </div>
+
+                <div class="category-card">
+                    <div class="card-header">
+                        <div class="card-icon">
+                            <i class="fas fa-home" aria-hidden="true"></i>
+                        </div>
+                        <h2>Mortgage Calculators</h2>
+                    </div>
+                    <ul class="calculator-list">
+                        <li><a href="calculators/mortgagecalc.html"><i class="fas fa-arrow-right" aria-hidden="true"></i> Mortgage Calculator</a></li>
+                        <li><a href="landingpage404.html"><i class="fas fa-arrow-right" aria-hidden="true"></i> Refinance Calculator</a></li>
+                        <li><a href="calculators/mortgagecalc.html"><i class="fas fa-arrow-right" aria-hidden="true"></i> Amortization Calculator</a></li>
+                        <li><a href="landingpage404.html"><i class="fas fa-arrow-right" aria-hidden="true"></i> Home Affordability Calculator</a></li>
+                        <li><a href="landingpage404.html"><i class="fas fa-arrow-right" aria-hidden="true"></i> Rent vs Buy Calculator</a></li>
+                    </ul>
+                </div>
+
+                <div class="category-card">
+                    <div class="card-header">
+                        <div class="card-icon">
+                            <i class="fas fa-chart-line" aria-hidden="true"></i>
+                        </div>
+                        <h2>Investment Calculators</h2>
+                    </div>
+                    <ul class="calculator-list">
+                        <li><a href="calculators/investcalc.html"><i class="fas fa-arrow-right" aria-hidden="true"></i> Investment Calculator</a></li>
+                        <li><a href="landingpage404.html"><i class="fas fa-arrow-right" aria-hidden="true"></i> Compound Interest Calculator</a></li>
+                        <li><a href="landingpage404.html"><i class="fas fa-arrow-right" aria-hidden="true"></i> Investment Return Calculator</a></li>
+                        <li><a href="landingpage404.html"><i class="fas fa-arrow-right" aria-hidden="true"></i> Stock Calculator</a></li>
+                        <li><a href="landingpage404.html"><i class="fas fa-arrow-right" aria-hidden="true"></i> Crypto Calculator</a></li>
+                    </ul>
+                </div>
+
+                <div class="category-card">
+                    <div class="card-header">
+                        <div class="card-icon">
+                            <i class="fas fa-credit-card" aria-hidden="true"></i>
+                        </div>
+                        <h2>Loan Calculators</h2>
+                    </div>
+                    <ul class="calculator-list">
+                        <li><a href="calculators/loancalc.html"><i class="fas fa-arrow-right" aria-hidden="true"></i> Loan Calculator</a></li>
+                        <li><a href="calculators/autoloancalc.html"><i class="fas fa-arrow-right" aria-hidden="true"></i> Auto Loan Calculator</a></li>
+                        <li><a href="calculators/personloancalc.html"><i class="fas fa-arrow-right" aria-hidden="true"></i> Personal Loan Calculator</a></li>
+                        <li><a href="landingpage404.html"><i class="fas fa-arrow-right" aria-hidden="true"></i> Student Loan Calculator</a></li>
+                        <li><a href="landingpage404.html"><i class="fas fa-arrow-right" aria-hidden="true"></i> Debt Payoff Calculator</a></li>
+                    </ul>
+                </div>
+
+                <div class="category-card">
+                    <div class="card-header">
+                        <div class="card-icon">
+                            <i class="fas fa-car" aria-hidden="true"></i>
+                        </div>
+                        <h2>Auto Calculators</h2>
+                    </div>
+                    <ul class="calculator-list">
+                        <li><a href="calculators/autoloancalc.html"><i class="fas fa-arrow-right" aria-hidden="true"></i> Car Loan Calculator</a></li>
+                        <li><a href="landingpage404.html"><i class="fas fa-arrow-right" aria-hidden="true"></i> Lease vs Buy Calculator</a></li>
+                        <li><a href="landingpage404.html"><i class="fas fa-arrow-right" aria-hidden="true"></i> Car Affordability Calculator</a></li>
+                        <li><a href="landingpage404.html"><i class="fas fa-arrow-right" aria-hidden="true"></i> Fuel Cost Calculator</a></li>
+                        <li><a href="landingpage404.html"><i class="fas fa-arrow-right" aria-hidden="true"></i> Vehicle Depreciation Calculator</a></li>
+                    </ul>
+                </div>
+
+                <!-- Additional Calculator Categories -->
+                <div class="category-card">
+                    <div class="card-header">
+                        <div class="card-icon">
+                            <i class="fas fa-heartbeat" aria-hidden="true"></i>
+                        </div>
+                        <h2>Health Calculators</h2>
+                    </div>
+                    <ul class="calculator-list">
+                        <li><a href="calculators/bmicalc.html"><i class="fas fa-arrow-right" aria-hidden="true"></i> BMI Calculator</a></li>
+                        <li><a href="calculators/caloricalc.html"><i class="fas fa-arrow-right" aria-hidden="true"></i> Calorie Calculator</a></li>
+                        <li><a href="calculators/bmrcalc.html"><i class="fas fa-arrow-right" aria-hidden="true"></i> BMR Calculator</a></li>
+                        <li><a href="calculators/targethrcalc.html"><i class="fas fa-arrow-right" aria-hidden="true"></i> Target Heart Rate Calculator</a></li>
+                        <li><a href="calculators/pregnancycalc.html"><i class="fas fa-arrow-right" aria-hidden="true"></i> Pregnancy Calculator</a></li>
+                    </ul>
+                </div>
+
+                <div class="category-card">
+                    <div class="card-header">
+                        <div class="card-icon">
+                            <i class="fas fa-square-root-alt" aria-hidden="true"></i>
+                        </div>
+                        <h2>Math Calculators</h2>
+                    </div>
+                    <ul class="calculator-list">
+                        <li><a href="index.html"><i class="fas fa-arrow-right" aria-hidden="true"></i> Scientific Calculator</a></li>
+                        <li><a href="calculators/fractioncalc.html"><i class="fas fa-arrow-right" aria-hidden="true"></i> Fraction Calculator</a></li>
+                        <li><a href="landingpage404.html"><i class="fas fa-arrow-right" aria-hidden="true"></i> Percentage Calculator</a></li>
+                        <li><a href="calculators/sdcalc.html"><i class="fas fa-arrow-right" aria-hidden="true"></i> Standard Deviation Calculator</a></li>
+                        <li><a href="calculators/geometrycalc.html"><i class="fas fa-arrow-right" aria-hidden="true"></i> Geometry Calculator</a></li>
+                    </ul>
+                </div>
+
+                <div class="category-card">
+                    <div class="card-header">
+                        <div class="card-icon">
+                            <i class="fas fa-calculator" aria-hidden="true"></i>
+                        </div>
+                        <h2>Other Calculators</h2>
+                    </div>
+                    <ul class="calculator-list">
+                        <li><a href="calculators/calcage.html"><i class="fas fa-arrow-right" aria-hidden="true"></i> Age Calculator</a></li>
+                        <li><a href="calculators/gpacalc.html"><i class="fas fa-arrow-right" aria-hidden="true"></i> GPA Calculator</a></li>
+                        <li><a href="calculators/gradecalc.html"><i class="fas fa-arrow-right" aria-hidden="true"></i> Grade Calculator</a></li>
+                        <li><a href="calculators/unitconvcalc.html"><i class="fas fa-arrow-right" aria-hidden="true"></i> Conversion Calculator</a></li>
+                        <li><a href="landingpage404.html"><i class="fas fa-arrow-right" aria-hidden="true"></i> Date Calculator</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="popular-section">
+                <div class="section-title">
+                    <h2>Most Popular Calculators</h2>
+                    <p>These are the tools our visitors find most helpful</p>
+                </div>
+
+                <div class="popular-calculators">
+                    <div class="popular-item">
+                        <i class="fas fa-coins" aria-hidden="true"></i>
+                        <h3>Retirement Calculator</h3>
+                        <p>Plan your ideal retirement</p>
+                        <a href="calculators/retirementcalc.html">Calculate Now</a>
+                    </div>
+
+                    <div class="popular-item">
+                        <i class="fas fa-file-invoice" aria-hidden="true"></i>
+                        <h3>Income Tax Calculator</h3>
+                        <p>Estimate your tax return</p>
+                        <a href="calculators/incomtcalc.html">Calculate Now</a>
+                    </div>
+
+                    <div class="popular-item">
+                        <i class="fas fa-home" aria-hidden="true"></i>
+                        <h3>Mortgage Calculator</h3>
+                        <p>Find your monthly payment</p>
+                        <a href="calculators/mortgagecalc.html">Calculate Now</a>
+                    </div>
+
+                    <div class="popular-item">
+                        <i class="fas fa-chart-line" aria-hidden="true"></i>
+                        <h3>Investment Calculator</h3>
+                        <p>See your investments grow</p>
+                        <a href="calculators/investcalc.html">Calculate Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+     <!-- SVG Icons Version - No External Dependencies -->
+                    <div style="
+                        position: fixed;
+                        top: 70%;
+                        left: 2px;
+                        transform: translateY(-50%);
+                        display: flex;
+                        flex-direction: column;
+                        gap: 20px;
+                        padding: 5px 5px;
+                        z-index: 1000;
+                        background: white;
+                        border-radius: 0 15px 15px 0;
+                        box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+                        border: 1px solid #e5e7eb;
+                        border-left: none;
+                    ">
+                        
+                        <!-- Twitter -->
+                        <a href="https://twitter.com/intent/tweet?url=https://top10calculators.com/" 
+                           target="_blank" 
+                           rel="noopener noreferrer"
+                           style="text-decoration: none; display: block;"
+                           title="Share on Twitter">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1DA1F2" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="transition: all 0.3s ease;" onmouseover="this.style.transform='scale(1.2) translateX(5px)'; this.style.stroke='#0d8bd9'" onmouseout="this.style.transform='scale(1) translateX(0)'; this.style.stroke='#1DA1F2'">
+                                <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/>
+                            </svg>
+                        </a>
+                        
+                        <!-- Facebook -->
+                        <a href="https://www.facebook.com/sharer/sharer.php?u=https://top10calculators.com/" 
+                           target="_blank" 
+                           rel="noopener noreferrer"
+                           style="text-decoration: none; display: block;"
+                           title="Share on Facebook">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#3b5998" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="transition: all 0.3s ease;" onmouseover="this.style.transform='scale(1.2) translateX(5px)'; this.style.stroke='#2d4373'" onmouseout="this.style.transform='scale(1) translateX(0)'; this.style.stroke='#3b5998'">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+                            </svg>
+                        </a>
+                        
+                        <!-- LinkedIn -->
+                        <a href="https://www.linkedin.com/shareArticle?url=https://top10calculators.com/" 
+                           target="_blank" 
+                           rel="noopener noreferrer"
+                           style="text-decoration: none; display: block;"
+                           title="Share on LinkedIn">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0A66C2" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="transition: all 0.3s ease;" onmouseover="this.style.transform='scale(1.2) translateX(5px)'; this.style.stroke='#084d96'" onmouseout="this.style.transform='scale(1) translateX(0)'; this.style.stroke='#0A66C2'">
+                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                                <rect x="2" y="9" width="4" height="12"/>
+                                <circle cx="4" cy="4" r="2"/>
+                            </svg>
+                        </a>
+                        
+                        <!-- Instagram -->
+                        <a href="https://www.instagram.com/top10calculators" 
+                           target="_blank" 
+                           rel="noopener noreferrer"
+                           style="text-decoration: none; display: block;"
+                           title="Follow on Instagram">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#E1306C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="transition: all 0.3s ease;" onmouseover="this.style.transform='scale(1.2) translateX(5px)'; this.style.stroke='#c41c5b'" onmouseout="this.style.transform='scale(1) translateX(0)'; this.style.stroke='#E1306C'">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                            </svg>
+                        </a>
+                    </div>
+
+
+                    <!-- Footer inline style -->
+                     <footer role="contentinfo" style="
+                        --function-bg: #3a5562;
+                        --text-white: white;
+                        --button-bg: #d8d0c0;
+                        --button-hover: #c8c0b0;
+                        
+                        background-color: var(--function-bg);
+                        color: var(--text-white);
+                        padding: 10px 0;
+                        margin-top: 5px;
+                        font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+                    ">
+                        <div style="
+                            max-width: 1200px;
+                            margin: 0 auto;
+                            display: grid;
+                            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                            gap: 60px;
+                            padding: 0 20px;
+                        ">
+                            <div style="
+                                display: flex;
+                                flex-direction: column;
+                            ">
+                                <h3 style="
+                                    color: var(--button-bg);
+                                    margin-bottom: 20px;
+                                    font-size: 18px;
+                                    font-weight: 600;
+                                ">Top 10 Calculators</h3>
+                               <p style="
+                                    color: #d8d0c0;
+                                    line-height: 1.3;
+                                    font-size: 15px;
+                                "> <strong>Disclaimer:</strong> The calculators on this site are provided for general informational purposes only. Results should be verified with qualified professionals. <br> <br>
+                                &copy; 2021-2025 top10calculators.com. All rights reserved.</p>
+                            </div>
+                     		
+                            <div style="
+                                display: flex;
+                                flex-direction: column;
+                            ">
+                                <h3 style="
+                                    color: var(--button-bg);
+                                    margin-bottom: 20px;
+                                    font-size: 18px;
+                                    font-weight: 600;
+                                ">Calculator Categories</h3>
+                                <ul style="
+                                    list-style: none;
+                                    margin: 0;
+                                    padding: 0;
+                                ">
+                                    <li style="margin-bottom: 10px;">
+                    		<a href="https://top10calculators.com/#calculator-categories" style="
+                        			color: var(--button-bg);
+                                            text-decoration: none;
+                                            transition: color 0.3s;
+                                            font-size: 15px;
+                                            display: inline-block;
+                                            padding: 4px 0;
+                                        " 
+                                        onmouseover="this.style.color='var(--button-hover)'"
+                                        onmouseout="this.style.color='var(--button-bg)'">
+                                            Mortgage & Finance
+                    		  </a>
+                                      </li>
+                    
+                                     <li style="margin-bottom: 10px;">
+                    		<a href="https://top10calculators.com/#calculator-categories" style="
+                        			color: var(--button-bg);
+                                            text-decoration: none;
+                                            transition: color 0.3s;
+                                            font-size: 15px;
+                                            display: inline-block;
+                                            padding: 4px 0;
+                                        " 
+                                        onmouseover="this.style.color='var(--button-hover)'"
+                                        onmouseout="this.style.color='var(--button-bg)'">
+                                            Health & Fitness
+                    		  </a>
+                                      </li>
+                    
+                    
+                                     <li style="margin-bottom: 10px;">
+                    		<a href="https://top10calculators.com/#calculator-categories" style="
+                        			color: var(--button-bg);
+                                            text-decoration: none;
+                                            transition: color 0.3s;
+                                            font-size: 15px;
+                                            display: inline-block;
+                                            padding: 4px 0;
+                                        " 
+                                        onmouseover="this.style.color='var(--button-hover)'"
+                                        onmouseout="this.style.color='var(--button-bg)'">
+                                            Math & Science
+                    		  </a>
+                                      </li>
+                    
+                    
+                                    <li style="margin-bottom: 10px;">
+                    		<a href="https://top10calculators.com/#calculator-categories" style="
+                        			color: var(--button-bg);
+                                            text-decoration: none;
+                                            transition: color 0.3s;
+                                            font-size: 15px;
+                                            display: inline-block;
+                                            padding: 4px 0;
+                                        " 
+                                        onmouseover="this.style.color='var(--button-hover)'"
+                                        onmouseout="this.style.color='var(--button-bg)'">
+                                            Life & Day-to-Day
+                    		  </a>
+                                      </li>
+                    
+                    
+                                </ul>
+                            </div>
+                    
+                            <div style="
+                                display: flex;
+                                flex-direction: column;
+                            ">
+                                <h3 style="
+                                    color: var(--button-bg);
+                                    margin-bottom: 10px;
+                                    font-size: 18px;
+                                    font-weight: 600;
+                                ">Quick Links</h3>
+                                <ul style="
+                                    list-style: none;
+                                    margin: 0;
+                                    padding: 0;
+                                ">
+                                    <li style="margin-bottom: 4px;">
+                                        <a href="https://top10calculators.com/index.html" style="
+                                            color: var(--button-bg);
+                                            text-decoration: none;
+                                            transition: color 0.3s;
+                                            font-size: 15px;
+                                            display: inline-block;
+                                            padding: 4px 0;
+                                        " 
+                                        onmouseover="this.style.color='var(--button-hover)'"
+                                        onmouseout="this.style.color='var(--button-bg)'">
+                                            Home
+                                        </a>
+                                    </li>
+                                    <li style="margin-bottom: 4px;">
+                                        <a href="https://top10calculators.com/aboutuscalc.html" style="
+                                            color: var(--button-bg);
+                                            text-decoration: none;
+                                            transition: color 0.3s;
+                                            font-size: 15px;
+                                            display: inline-block;
+                                            padding: 4px 0;
+                                        " 
+                                        onmouseover="this.style.color='var(--button-hover)'"
+                                        onmouseout="this.style.color='var(--button-bg)'">
+                                            About Us
+                                        </a>
+                                    </li>
+                                    <li style="margin-bottom: 4px;">
+                                        <a href="https://calculate.lt/" 
+                                           rel="noopener" 
+                                           style="
+                                            color: var(--button-bg);
+                                            text-decoration: none;
+                                            transition: color 0.3s;
+                                            font-size: 15px;
+                                            display: inline-block;
+                                            padding: 4px 0;
+                                        " 
+                                        onmouseover="this.style.color='var(--button-hover)'"
+                                        onmouseout="this.style.color='var(--button-bg)'">
+                                            Blog
+                                        </a>
+                                    </li>
+                                    <li style="margin-bottom: 4px;">
+                                        <a href="https://top10calculators.com/feedbackform.html" style="
+                                            color: var(--button-bg);
+                                            text-decoration: none;
+                                            transition: color 0.3s;
+                                            font-size: 15px;
+                                            display: inline-block;
+                                            padding: 4px 0;
+                                        " 
+                                        onmouseover="this.style.color='var(--button-hover)'"
+                                        onmouseout="this.style.color='var(--button-bg)'">
+                                            Contact
+                                        </a>
+                                    </li>
+                                    <li style="margin-bottom: 4px;">
+                                        <a href="https://top10calculators.com/privacypolicycalc.html" style="
+                                            color: var(--button-bg);
+                                            text-decoration: none;
+                                            transition: color 0.3s;
+                                            font-size: 15px;
+                                            display: inline-block;
+                                            padding: 4px 0;
+                                        " 
+                                        onmouseover="this.style.color='var(--button-hover)'"
+                                        onmouseout="this.style.color='var(--button-bg)'">
+                                            Privacy Policy
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    
+                       
+                    </footer>
+    <script>
+        // Simple animation for calculator cards
+        document.addEventListener('DOMContentLoaded', function() {
+            const cards = document.querySelectorAll('.category-card');
+            
+            cards.forEach((card, index) => {
+                // Add delay for staggered animation
+                card.style.animationDelay = `${index * 0.1}s`;
+                card.classList.add('fade-in');
+            });
+        });
+    </script>
+</body>
+</html>

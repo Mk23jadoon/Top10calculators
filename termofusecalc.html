@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Use - Calculate It</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+ <link rel="preload" href="calculator.js" as="script">
+ <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+
+
+
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-1665YE8BPB"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-1665YE8BPB');
+</script>
+
+
+
+ 
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #f5f5f0 0%, #e8e8e0 100%);
+            color: #333;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            text-align: center;
+            padding: 30px 0;
+            background: linear-gradient(to right, #567d7d, #314c44);
+            color: white;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .content {
+            display: flex;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .main-content {
+            flex: 2;
+            background-color: white;
+            border-radius: 15px;
+            padding: 35px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        }
+        
+        .sidebar {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        .info-box {
+            background: linear-gradient(to bottom, #f0f0e8, #e8e8e0);
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+            border: 1px solid #d8d8d0;
+        }
+        
+        .info-box h3 {
+            color: #2a5c4c;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #d8d0c0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .section {
+            margin-bottom: 40px;
+        }
+        
+        .section h2 {
+            color: #2a5c4c;
+            margin: 30px 0 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #d8d0c0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .section p {
+            margin-bottom: 15px;
+            line-height: 1.8;
+        }
+        
+        .section ul {
+            margin-left: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .section li {
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+        
+        .highlight {
+            background-color: #e8f4f0;
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 4px solid #2a5c4c;
+            margin: 25px 0;
+        }
+        
+        .back-to-calc {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 25px;
+            background-color: #2a5c4c;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+        }
+        
+        .back-to-calc:hover {
+            background-color: #3a7a60;
+        }
+        
+        .toc-nav {
+            background: linear-gradient(to bottom, #f9f9f5, #f0f0e8);
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 30px;
+            border: 1px solid #d8d0c0;
+        }
+        
+        .toc-nav h3 {
+            color: #2a5c4c;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .toc-links {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 10px;
+        }
+        
+        .toc-links a {
+            color: #3a5562;
+            text-decoration: none;
+            padding: 8px 12px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            display: block;
+        }
+        
+        .toc-links a:hover {
+            background-color: #e0e8d8;
+            text-decoration: none;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 30px;
+            color: #3a5562;
+            border-top: 1px solid #c8c0b0;
+            background: linear-gradient(to bottom, #f5f5f0, #e8e8e0);
+            border-radius: 10px;
+        }
+        
+        .footer-links {
+            margin: 20px 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .footer-links a {
+            color: #3a5562;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: #2a4552;
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 900px) {
+            .content {
+                flex-direction: column;
+            }
+            
+            .toc-links {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 600px) {
+            .footer-links {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+        
+        .definition {
+            background-color: #f9f9f5;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+            border-left: 3px solid #3a5562;
+        }
+        
+        .definition strong {
+            color: #2a5c4c;
+        }
+    </style>
+</head>
+
+<div style="position: fixed; top: 0; left: 50%; transform: translateX(-50%); width: 800px; display: flex; justify-content: space-between; align-items: center; gap: 20px; background: #e1e1be; padding: 7px 10px; border-radius: 10px; border: 1px solid rgba(11, 255, 226, 0.1); box-shadow: 0 2px 8px rgba(47, 204, 252, 0.05); backdrop-filter: blur(6px); z-index: 1000;">
+            <!-- Navigation Links (Left) -->
+            <div style="display: flex; gap: 20px;">
+                <a href="index.html" style="text-decoration: none; color: #74bd2b; font-family: 'Inter', sans-serif; font-size: 15px; font-weight: 500; transition: color 0.3s ease, transform 0.2s ease;" onmouseover="this.style.color='#3b82f6'; this.style.transform='scale(1.05)'" onmouseout="this.style.color='#1a1a1a'; this.style.transform='scale(1)'">Home</a>
+                <a href="https://calculate.lt" style="text-decoration: none; color: #f59696; font-family: 'Inter', sans-serif; font-size: 15px; font-weight: 500; transition: color 0.3s ease, transform 0.2s ease;" onmouseover="this.style.color='#3b82f6'; this.style.transform='scale(1.05)'" onmouseout="this.style.color='#1a1a1a'; this.style.transform='scale(1)'">Blog</a>
+                <a href="feedbackform.html" style="text-decoration: none; color: #e761dc; font-family: 'Inter', sans-serif; font-size: 15px; font-weight: 500; transition: color 0.3s ease, transform 0.2s ease;" onmouseover="this.style.color='#3b82f6'; this.style.transform='scale(1.05)'" onmouseout="this.style.color='#1a1a1a'; this.style.transform='scale(1)'">Contact</a>
+                <a href="aboutuscalc.html" style="text-decoration: none; color: #6190e6; font-family: 'Inter', sans-serif; font-size: 15px; font-weight: 500; transition: color 0.3s ease, transform 0.2s ease;" onmouseover="this.style.color='#3b82f6'; this.style.transform='scale(1.05)'" onmouseout="this.style.color='#1a1a1a'; this.style.transform='scale(1)'">About</a>
+            </div>
+            <!-- Social Media Share Links (Right) -->
+            <div style="display: flex; gap: 12px; align-items: center;">
+                <a href="https://twitter.com/intent/tweet" target="_blank" style="text-decoration: none; color: #1a1a1a; font-size: 18px; transition: color 0.3s ease, transform 0.2s ease;" onmouseover="this.style.color='#1DA1F2'; this.style.transform='scale(1.1)'" onmouseout="this.style.color='#1a1a1a'; this.style.transform='scale(1)'"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="https://www.facebook.com/sharer/sharer.php" target="_blank" style="text-decoration: none; color: #1a1a1a; font-size: 18px; transition: color 0.3s ease, transform 0.2s ease;" onmouseover="this.style.color='#3b5998'; this.style.transform='scale(1.1)'" onmouseout="this.style.color='#1a1a1a'; this.style.transform='scale(1)'"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://www.linkedin.com/shareArticle" target="_blank" style="text-decoration: none; color: #1a1a1a; font-size: 18px; transition: color 0.3s ease, transform 0.2s ease;" onmouseover="this.style.color='#0A66C2'; this.style.transform='scale(1.1)'" onmouseout="this.style.color='#1a1a1a'; this.style.transform='scale(1)'"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://www.instagram.com" target="_blank" style="text-decoration: none; color: #1a1a1a; font-size: 18px; transition: color 0.3s ease, transform 0.2s ease;" onmouseover="this.style.color='#E1306C'; this.style.transform='scale(1.1)'" onmouseout="this.style.color='#1a1a1a'; this.style.transform='scale(1)'"><i class="fa-brands fa-instagram"></i></a>
+            
+            </div>
+        </div>
+
+
+
+
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Calculate It</h1>
+            <p class="subtitle">Terms of Use Agreement</p>
+        </header>
+        
+        <div class="content">
+            <div class="main-content">
+                <div class="toc-nav">
+                    <h3><i class="fas fa-list"></i> Table of Contents</h3>
+                    <div class="toc-links">
+                        <a href="#acceptance">1. Acceptance of Terms</a>
+                        <a href="#services">2. Description of Services</a>
+                        <a href="#access">3. Access and Use</a>
+                        <a href="#intellectual">4. Intellectual Property</a>
+                        <a href="#user-content">5. User Content</a>
+                        <a href="#disclaimer">6. Disclaimer</a>
+                        <a href="#limitation">7. Limitation of Liability</a>
+                        <a href="#indemnification">8. Indemnification</a>
+                        <a href="#termination">9. Termination</a>
+                        <a href="#governing">10. Governing Law</a>
+                        <a href="#changes">11. Changes to Terms</a>
+                        <a href="#contact">12. Contact Information</a>
+                    </div>
+                </div>
+                
+                <div class="section">
+                    <h2><i class="fas fa-file-contract"></i> Terms of Use</h2>
+                    <p>Last Updated: January 1, 2023</p>
+                    
+                    <p>Please read these Terms of Use ("Terms") carefully before using the Calculate It website (the "Service") operated by Calculate It ("us", "we", or "our").</p>
+                    
+                    <div class="highlight">
+                        <p>Your access to and use of the Service is conditioned on your acceptance of and compliance with these Terms. These Terms apply to all visitors, users, and others who access or use the Service.</p>
+                    </div>
+                    
+                    <p>By accessing or using the Service, you agree to be bound by these Terms. If you disagree with any part of the terms, then you may not access the Service.</p>
+                </div>
+                
+                <div id="acceptance" class="section">
+                    <h2><i class="fas fa-check-circle"></i> 1. Acceptance of Terms</h2>
+                    <p>By accessing, browsing, or using the Calculate It website, you acknowledge that you have read, understood, and agree to be bound by these Terms of Use and to comply with all applicable laws and regulations.</p>
+                    
+                    <p>If you do not agree to these Terms, you are not authorized to use this website. The materials contained in this website are protected by applicable copyright and trademark law.</p>
+                </div>
+                
+                <div id="services" class="section">
+                    <h2><i class="fas fa-calculator"></i> 2. Description of Services</h2>
+                    <p>Calculate It provides online calculation tools and resources for educational, personal, and professional use. Our services include but are not limited to:</p>
+                    
+                    <ul>
+                        <li>Mathematical calculators</li>
+                        <li>Financial calculation tools</li>
+                        <li>Health and fitness calculators</li>
+                        <li>Conversion tools</li>
+                        <li>Specialized calculators for various purposes</li>
+                    </ul>
+                    
+                    <div class="definition">
+                        <p><strong>Definition:</strong> "Service" refers to the Calculate It website, all associated subdomains, mobile applications, calculator tools, content, and related services.</p>
+                    </div>
+                    
+                    <p>We reserve the right to modify, suspend, or discontinue any aspect of the Service at any time, including the availability of any feature, database, or content.</p>
+                </div>
+                
+                <div id="access" class="section">
+                    <h2><i class="fas fa-user-check"></i> 3. Access and Use</h2>
+                    <p>Calculate It grants you a personal, non-exclusive, non-transferable, limited privilege to access and use the Service.</p>
+                    
+                    <p><strong>Permitted Use:</strong> You may use our calculators for personal, educational, and non-commercial purposes.</p>
+                    
+                    <p><strong>Prohibited Activities:</strong> When using our Service, you agree not to:</p>
+                    <ul>
+                        <li>Use the Service for any illegal purpose or in violation of any laws</li>
+                        <li>Attempt to gain unauthorized access to any part of the Service</li>
+                        <li>Use any automated system, including "robots," "spiders," or "offline readers" to access the Service</li>
+                        <li>Interfere with or disrupt the Service or servers connected to the Service</li>
+                        <li>Reproduce, duplicate, copy, sell, resell, or exploit any portion of the Service without express written permission</li>
+                        <li>Use the Service for any commercial purpose without our express written consent</li>
+                    </ul>
+                </div>
+                
+                <div id="intellectual" class="section">
+                    <h2><i class="fas fa-copyright"></i> 4. Intellectual Property</h2>
+                    <p>The Service and its original content, features, and functionality are and will remain the exclusive property of Calculate It and its licensors.</p>
+                    
+                    <p><strong>Copyright:</strong> All content on this website, including but not limited to text, graphics, logos, button icons, images, audio clips, digital downloads, data compilations, and software, is the property of Calculate It or its content suppliers and protected by international copyright laws.</p>
+                    
+                    <p><strong>Trademarks:</strong> The Calculate It name and logo, and all related names, logos, product and service names, designs, and slogans are trademarks of Calculate It or its affiliates or licensors. You must not use such marks without the prior written permission of Calculate It.</p>
+                    
+                    <div class="highlight">
+                        <p>You may not modify, publish, transmit, participate in the transfer or sale of, reproduce, create derivative works based on, distribute, or in any way exploit any of the content available on the Service, in whole or in part.</p>
+                    </div>
+                </div>
+                
+                <div id="user-content" class="section">
+                    <h2><i class="fas fa-edit"></i> 5. User Content</h2>
+                    <p>"User Content" means any and all information and content that a user submits to or creates using the Service (e.g., calculation inputs, saved results, comments).</p>
+                    
+                    <p>You are solely responsible for your User Content. You assume all risks associated with use of your User Content, including any reliance on its accuracy, completeness, or usefulness by others.</p>
+                    
+                    <p>By posting or creating User Content, you represent and warrant that:</p>
+                    <ul>
+                        <li>You own or have the necessary rights to use and authorize us to use your User Content</li>
+                        <li>Your User Content does not violate any applicable laws or regulations</li>
+                        <li>Your User Content does not infringe the rights of any third party</li>
+                    </ul>
+                    
+                    <p>We are not responsible for any User Content nor do we endorse any opinion contained in any User Content.</p>
+                </div>
+                
+                <div id="disclaimer" class="section">
+                    <h2><i class="fas fa-exclamation-triangle"></i> 6. Disclaimer</h2>
+                    <p><strong>Educational Purpose Only:</strong> The calculators and information provided on Calculate It are for general informational and educational purposes only. All information is provided in good faith, however, we make no representation or warranty of any kind, express or implied, regarding the accuracy, adequacy, validity, reliability, availability, or completeness of any information on the Site.</p>
+                    
+                    <div class="highlight">
+                        <p><strong>No Professional Advice:</strong> The information provided by Calculate It is not intended to be a substitute for professional advice. Under no circumstance shall we have any liability to you for any loss or damage of any kind incurred as a result of the use of the site or reliance on any information provided on the site. Your use of the site and your reliance on any information on the site is solely at your own risk.</p>
+                    </div>
+                    
+                    <p><strong>Financial/Health Disclaimer:</strong> For specific financial, medical, legal, or other professional advice, you should consult with a licensed professional. Do not rely on our calculators for critical decisions without verifying results with qualified professionals.</p>
+                </div>
+                
+                <div id="limitation" class="section">
+                    <h2><i class="fas fa-balance-scale"></i> 7. Limitation of Liability</h2>
+                    <p>In no event shall Calculate It, nor its directors, employees, partners, agents, suppliers, or affiliates, be liable for any indirect, incidental, special, consequential, or punitive damages, including without limitation, loss of profits, data, use, goodwill, or other intangible losses, resulting from:</p>
+                    
+                    <ul>
+                        <li>Your access to or use of or inability to access or use the Service</li>
+                        <li>Any conduct or content of any third party on the Service</li>
+                        <li>Any content obtained from the Service</li>
+                        <li>Unauthorized access, use, or alteration of your transmissions or content</li>
+                    </ul>
+                    
+                    <p>This limitation of liability section applies whether the alleged liability is based on contract, tort, negligence, strict liability, or any other basis, even if Calculate It has been advised of the possibility of such damage.</p>
+                </div>
+                
+                <div id="indemnification" class="section">
+                    <h2><i class="fas fa-shield-alt"></i> 8. Indemnification</h2>
+                    <p>You agree to defend, indemnify, and hold harmless Calculate It and its licensee and licensors, and their employees, contractors, agents, officers, and directors, from and against any and all claims, damages, obligations, losses, liabilities, costs or debt, and expenses (including but not limited to attorney's fees), resulting from or arising out of:</p>
+                    
+                    <ul>
+                        <li>Your use and access of the Service</li>
+                        <li>Your violation of these Terms</li>
+                        <li>Your violation of any third-party right, including without limitation any copyright, property, or privacy right</li>
+                    </ul>
+                    
+                    <p>This defense and indemnification obligation will survive these Terms and your use of the Service.</p>
+                </div>
+                
+                <div id="termination" class="section">
+                    <h2><i class="fas fa-ban"></i> 9. Termination</h2>
+                    <p>We may terminate or suspend your access to all or part of the Service immediately, without prior notice or liability, for any reason whatsoever, including without limitation if you breach the Terms.</p>
+                    
+                    <p>Upon termination, your right to use the Service will immediately cease. All provisions of the Terms which by their nature should survive termination shall survive termination, including, without limitation, ownership provisions, warranty disclaimers, indemnity, and limitations of liability.</p>
+                </div>
+                
+                <div id="governing" class="section">
+                    <h2><i class="fas fa-gavel"></i> 10. Governing Law</h2>
+                    <p>These Terms shall be governed and construed in accordance with the laws of the State of Delaware, United States, without regard to its conflict of law provisions.</p>
+                    
+                    <p>Our failure to enforce any right or provision of these Terms will not be considered a waiver of those rights. If any provision of these Terms is held to be invalid or unenforceable by a court, the remaining provisions of these Terms will remain in effect.</p>
+                </div>
+                
+                <div id="changes" class="section">
+                    <h2><i class="fas fa-sync-alt"></i> 11. Changes to Terms</h2>
+                    <p>We reserve the right, at our sole discretion, to modify or replace these Terms at any time. If a revision is material, we will provide at least 30 days' notice prior to any new terms taking effect. What constitutes a material change will be determined at our sole discretion.</p>
+                    
+                    <p>By continuing to access or use our Service after any revisions become effective, you agree to be bound by the revised terms. If you do not agree to the new terms, you are no longer authorized to use the Service.</p>
+                </div>
+                
+                <div id="contact" class="section">
+                    <h2><i class="fas fa-envelope"></i> 12. Contact Information</h2>
+                    <p>If you have any questions about these Terms, please contact us at:</p>
+                    
+                    <div class="highlight">
+                        <p><strong>Calculate It Legal Department</strong><br>
+                        Email: legal@calculateit.com<br>
+                        Postal Mail: 123 Calculation Drive, Mathville, CA 90210</p>
+                    </div>
+                    
+                    <p>We will make every effort to respond to legitimate inquiries within a reasonable time period.</p>
+                </div>
+                
+                <a href="javascript:history.back()" class="back-to-calc"><i class="fas fa-arrow-left"></i> Back to Calculator</a>
+            </div>
+            
+            <div class="sidebar">
+                <div class="info-box">
+                    <h3><i class="fas fa-exclamation-circle"></i> Important Notice</h3>
+                    <p>By using our website, you acknowledge that you have read and understood these Terms of Use and agree to be bound by them.</p>
+                </div>
+                
+                <div class="info-box">
+                    <h3><i class="fas fa-file-alt"></i> Related Documents</h3>
+                    <p><a href="#" style="color: #3a5562; text-decoration: underline;">Privacy Policy</a></p>
+                    <p><a href="#" style="color: #3a5562; text-decoration: underline;">Cookie Policy</a></p>
+                    <p><a href="#" style="color: #3a5562; text-decoration: underline;">Disclaimer</a></p>
+                </div>
+                
+                <div class="info-box">
+                    <h3><i class="fas fa-history"></i> Document History</h3>
+                    <p><strong>Last Updated:</strong> January 1, 2023</p>
+                    <p><strong>Effective Date:</strong> January 1, 2018</p>
+                    <p><strong>First Published:</strong> January 1, 2008</p>
+                </div>
+                
+                <div class="info-box">
+                    <h3><i class="fas fa-language"></i> Language</h3>
+                    <p>These Terms of Use were written in English. To the extent any translated version of these Terms of Use conflicts with the English version, the English version controls.</p>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <p>Calculate It - Comprehensive Calculator Resource</p>
+            <div class="footer-links">
+                <a href="#">Home</a>
+                <a href="#">All Calculators</a>
+                <a href="#">About Us</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Use</a>
+                <a href="#">Contact</a>
+            </div>
+            <p>© 2008 - 2023 Calculate It. All rights reserved.</p>
+        </footer>
+    </div>
+
+<script>
+    // Simple JavaScript for the page
+    document.addEventListener('DOMContentLoaded', function() {
+        // Highlight the current page in navigation
+        const currentPage = window.location.pathname.split('/').pop();
+        const navLinks = document.querySelectorAll('.footer-links a');
+        
+        navLinks.forEach(link => {
+            if (link.getAttribute('href') === currentPage) {
+                link.style.fontWeight = 'bold';
+                // Fixed the incorrect usage of CSS variable
+                link.style.color = getComputedStyle(document.documentElement).getPropertyValue('--operator-bg').trim();
+            }
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    });
+</script>
+
+    
+</body>
+</html>

@@ -1,0 +1,14 @@
+# robots.txt for top10calculators.com - Updated October 03, 2025
+User-agent: *  # Applies to all bots
+Allow: /       # Allow crawling of the entire site
+Disallow: /admin/     # Block admin area
+Disallow: /login.html # Block login page
+Disallow: /signup.html # Block signup page
+
+Sitemap: https://top10calculators.com/sitemap.xml  # Reference to XML sitemap
+
+
+
+
+
+

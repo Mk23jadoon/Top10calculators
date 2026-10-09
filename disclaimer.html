@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disclaimer - Top10Calculators.com</title>
+    
+    <meta name="google-adsense-account" content="ca-pub-2661173827213576">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="preload" href="calculator.js" as="script">
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+
+  
+  
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-1665YE8BPB"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-1665YE8BPB');
+</script>
+
+  
+    <style>
+        :root {
+            --primary-bg: #fafaeb;
+            --container-bg: #e8e0d0;
+            --display-bg: #d0d0c8;
+            --button-bg: #d8d0c0;
+            --button-hover: #c8c0b0;
+            --operator-bg: #4a6572;
+            --operator-hover: #3a5562;
+            --function-bg: #3a5562;
+            --function-hover: #2a4552;
+            --clear-bg: #D86A26;
+            --clear-hover: #BB6533;
+            --ad-bg: linear-gradient(to right, #e0e0d8, #d0d0c8);
+            --ad-unit-bg: linear-gradient(to bottom, #f0f0e8, #e8e8e0);
+            --category-bg: linear-gradient(to bottom, #f5f5ed, #e8e8e0);
+            
+            --text-primary: #333;
+            --text-dark: #1a3a2a;
+            --text-medium: #3a5562;
+            --text-light: #7a7a72;
+            --text-white: white;
+            
+            --border-light: #d8d0c0;
+            --border-medium: #c8c0b0;
+            --border-dark: #8f8f75;
+            
+            --border-radius: 12px;
+            --border-radius-sm: 8px;
+            --shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            --shadow-sm: 0 4px 8px rgba(0, 0, 0, 0.08);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: var(--primary-bg);
+            color: var(--text-primary);
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        header {
+            text-align: center;
+            padding: 30px 0;
+            background: linear-gradient(to right, var(--operator-bg), var(--function-bg));
+            color: var(--text-white);
+            border-radius: var(--border-radius);
+            margin-bottom: 30px;
+            box-shadow: var(--shadow);
+        }
+        
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .content {
+            display: flex;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .main-content {
+            flex: 2;
+            background-color: var(--container-bg);
+            border-radius: var(--border-radius);
+            padding: 35px;
+            box-shadow: var(--shadow);
+        }
+        
+        .sidebar {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        .info-box {
+            background: var(--ad-unit-bg);
+            border-radius: var(--border-radius-sm);
+            padding: 20px;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--border-light);
+        }
+        
+        .info-box h3 {
+            color: var(--operator-bg);
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--border-light);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .section {
+            margin-bottom: 40px;
+        }
+        
+        .section h2 {
+            color: var(--operator-bg);
+            margin: 30px 0 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--border-light);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .section p {
+            margin-bottom: 15px;
+            line-height: 1.8;
+        }
+        
+        .section ul {
+            margin-left: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .section li {
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+        
+        .highlight {
+            background-color: rgba(232, 244, 240, 0.5);
+            padding: 20px;
+            border-radius: var(--border-radius-sm);
+            border-left: 4px solid var(--operator-bg);
+            margin: 25px 0;
+            font-weight: 600;
+        }
+        
+        .warning-box {
+            background-color: rgba(230, 57, 70, 0.1);
+            padding: 20px;
+            border-radius: var(--border-radius-sm);
+            border-left: 4px solid #e63946;
+            margin: 25px 0;
+        }
+        
+        .warning-box h3 {
+            color: #e63946;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .back-to-calc {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 25px;
+            background-color: var(--operator-bg);
+            color: var(--text-white);
+            text-decoration: none;
+            border-radius: var(--border-radius-sm);
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+        }
+        
+        .back-to-calc:hover {
+            background-color: var(--operator-hover);
+        }
+        
+      
+        
+        .last-updated {
+            font-style: italic;
+            color: var(--text-light);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        @media (max-width: 900px) {
+            .content {
+                flex-direction: column;
+            }
+        }
+        
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            .main-content {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Top 10 Calculators</h1>
+            <p class="subtitle">Website Disclaimer & Liability Information</p>
+        </header>
+        
+        <div class="last-updated">
+            <p><strong>Last Updated:</strong> <span id="currentDate"></span></p>
+        </div>
+        
+        <div class="content">
+            <div class="main-content">
+                <div class="warning-box">
+                    <h3><i class="fas fa-exclamation-triangle"></i> Important Notice</h3>
+                    <p>The calculators and information on Top10Calculators.com are for educational and informational purposes only. The results are estimates, not professional advice. We are not liable for any decisions made based on these calculations. For financial, health, or legal matters, please consult a qualified professional.</p>
+                </div>
+                
+                <div class="section">
+                    <h2><i class="fas fa-gavel"></i> 1. No Professional Advice</h2>
+                    <p>The information provided by Top10Calculators.com ("we," "us," or "our") and the use of any calculators, tools, or content on this website (the "Service") is for general informational and educational purposes only.</p>
+                    
+                    <div class="highlight">
+                        <p>ALL INFORMATION AND CALCULATIONS ARE PROVIDED "AS IS" WITHOUT ANY WARRANTY OR REPRESENTATION OF ANY KIND, EXPRESS OR IMPLIED.</p>
+                    </div>
+                    
+                    <p>The Service is not a substitute for professional advice from qualified experts, including but not limited to:</p>
+                    
+                    <ul>
+                        <li><strong>Financial Advice:</strong> Certified Financial Planners, Accountants, Tax Advisors, Loan Officers, or Investment Advisors.</li>
+                        <li><strong>Medical/Health Advice:</strong> Medical Doctors, Registered Dietitians, Fitness Professionals, or other Healthcare Providers.</li>
+                        <li><strong>Legal Advice:</strong> Attorneys or Legal Professionals.</li>
+                    </ul>
+                    
+                    <p>You should NOT rely solely on the calculations or information from this website to make financial, health, legal, or any other significant decisions. Always seek independent, professional advice tailored to your specific circumstances before acting on any information found on this Service.</p>
+                </div>
+                
+                <div class="section">
+                    <h2><i class="fas fa-chart-line"></i> 2. Accuracy of Information</h2>
+                    <p>While we strive to provide accurate and up-to-date information and use standard formulas in our calculators, we make no representations or warranties of any kind, express or implied, about the completeness, accuracy, reliability, suitability, or availability of the Service.</p>
+                    
+                    <p>The results generated by our calculators are estimates and simulations based on the data you input. They are not guaranteed to be accurate or error-free. Actual results in real-world situations may vary significantly due to factors beyond the scope of our calculators, including changes in market conditions, tax laws, interest rates, personal health factors, and other variables.</p>
+                </div>
+                
+                <div class="section">
+                    <h2><i class="fas fa-balance-scale"></i> 3. Limitation of Liability</h2>
+                    <p>To the fullest extent permitted by law, Top10Calculators.com, its owners, employees, agents, and affiliates shall not be liable for any direct, indirect, incidental, consequential, special, punitive, or exemplary damages of any kind whatsoever, including but not limited to:</p>
+                    
+                    <ul>
+                        <li>Financial losses or damages (e.g., investment losses, loan discrepancies, tax penalties).</li>
+                        <li>Health-related issues or damages.</li>
+                        <li>Loss of data or profit.</li>
+                        <li>Any other commercial or personal damages.</li>
+                    </ul>
+                    
+                    <p>This limitation of liability applies to all claims, whether based on warranty, contract, tort (including negligence), or any other legal theory, even if we have been advised of the possibility of such damages.</p>
+                </div>
+                
+                <div class="section">
+                    <h2><i class="fas fa-file-invoice-dollar"></i> 4. Financial & Health Disclaimers</h2>
+                    
+                    <h3>Financial Calculators</h3>
+                    <p>Calculations for mortgages, loans, investments, and taxes are estimates for educational purposes. They do not constitute financial advice, an offer to lend, or a guarantee of terms from any financial institution. You must consult with a qualified financial professional for advice specific to your situation.</p>
+                    
+                    <h3>Health Calculators</h3>
+                    <p>Calculations for BMI, calorie needs, target heart rate, pregnancy, and other health-related metrics are general guidelines based on population averages. They are not a medical diagnosis or treatment plan. Individual health factors can cause significant variation. <strong>Always consult a healthcare professional before making any changes to your diet, exercise, or health regimen.</strong></p>
+                </div>
+                
+                <div class="section">
+                    <h2><i class="fas fa-user-check"></i> 5. User Responsibility</h2>
+                    <p>By using this Service, you acknowledge and agree that you are solely responsible for:</p>
+                    
+                    <ul>
+                        <li>The accuracy of the data you input into the calculators.</li>
+                        <li>The interpretation and use of the results generated.</li>
+                        <li>Any decisions or actions you take based on the information provided.</li>
+                    </ul>
+                    
+                    <p>You assume full responsibility for any risk or loss resulting from your use of the Service.</p>
+                </div>
+                
+                <div class="section">
+                    <h2><i class="fas fa-external-link-alt"></i> 6. Third-Party Links & Content</h2>
+                    <p>Our Service may contain links to third-party websites or content. We provide these links for convenience only. We have no control over and assume no responsibility for the content, privacy policies, or practices of any third-party sites. The inclusion of any link does not imply our endorsement.</p>
+                </div>
+                
+                <div class="section">
+                    <h2><i class="fas fa-comment"></i> 7. Testimonials and Examples</h2>
+                    <p>Any testimonials or examples on our website are exceptional results, are not typical, and do not guarantee that you will achieve the same results. Your individual results will vary.</p>
+                </div>
+                
+                <div class="section">
+                    <h2><i class="fas fa-check-circle"></i> 8. Acceptance of This Disclaimer</h2>
+                    <p>By accessing and using Top10Calculators.com, you signify your acceptance of this Disclaimer. If you do not agree to this Disclaimer, you must not use our website.</p>
+                </div>
+                
+                <div class="section">
+                    <h2><i class="fas fa-envelope"></i> 9. Contact Information</h2>
+                    <p>If you have any questions about this Disclaimer, you can contact us through our contact form at <a href="feedbackform.html">Contact Us</a>.</p>
+                </div>
+                
+                <a href="index.html" class="back-to-calc"><i class="fas fa-arrow-left"></i> Back to Calculator</a>
+            </div>
+            
+            <div class="sidebar">
+                <div class="info-box">
+                    <h3><i class="fas fa-exclamation-circle"></i> Quick Summary</h3>
+                    <p><strong>Purpose:</strong> Educational & informational only</p>
+                    <p><strong>Accuracy:</strong> Estimates based on standard formulas</p>
+                    <p><strong>Liability:</strong> We are not responsible for decisions made based on our calculators</p>
+                    <p><strong>Professional Advice:</strong> Always consult experts for important decisions</p>
+                </div>
+                
+                <div class="info-box">
+                    <h3><i class="fas fa-file-alt"></i> Related Documents</h3>
+                    <p><a href="privacypolicycalc.html">Privacy Policy</a></p>
+                    <p><a href="termofusecalc.html">Terms of Use</a></p>
+                    <p><a href="aboutuscalc.html">About Us</a></p>
+                </div>
+                
+                <div class="info-box">
+                    <h3><i class="fas fa-shield-alt"></i> Your Protection</h3>
+                    <p>This disclaimer exists to protect both you and us by ensuring clear understanding of how our calculators should be used.</p>
+                </div>
+            </div>
+        </div>
+        
+        </div>
+        
+          <!-- SVG Icons Version - No External Dependencies -->
+                    <div style="
+                        position: fixed;
+                        top: 70%;
+                        left: 2px;
+                        transform: translateY(-50%);
+                        display: flex;
+                        flex-direction: column;
+                        gap: 20px;
+                        padding: 5px 5px;
+                        z-index: 1000;
+                        background: white;
+                        border-radius: 0 15px 15px 0;
+                        box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+                        border: 1px solid #e5e7eb;
+                        border-left: none;
+                    ">
+                        
+                        <!-- Twitter -->
+                        <a href="https://twitter.com/intent/tweet?url=https://top10calculators.com/" 
+                           target="_blank" 
+                           rel="noopener noreferrer"
+                           style="text-decoration: none; display: block;"
+                           title="Share on Twitter">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1DA1F2" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="transition: all 0.3s ease;" onmouseover="this.style.transform='scale(1.2) translateX(5px)'; this.style.stroke='#0d8bd9'" onmouseout="this.style.transform='scale(1) translateX(0)'; this.style.stroke='#1DA1F2'">
+                                <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/>
+                            </svg>
+                        </a>
+                        
+                        <!-- Facebook -->
+                        <a href="https://www.facebook.com/sharer/sharer.php?u=https://top10calculators.com/" 
+                           target="_blank" 
+                           rel="noopener noreferrer"
+                           style="text-decoration: none; display: block;"
+                           title="Share on Facebook">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#3b5998" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="transition: all 0.3s ease;" onmouseover="this.style.transform='scale(1.2) translateX(5px)'; this.style.stroke='#2d4373'" onmouseout="this.style.transform='scale(1) translateX(0)'; this.style.stroke='#3b5998'">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+                            </svg>
+                        </a>
+                        
+                        <!-- LinkedIn -->
+                        <a href="https://www.linkedin.com/shareArticle?url=https://top10calculators.com/" 
+                           target="_blank" 
+                           rel="noopener noreferrer"
+                           style="text-decoration: none; display: block;"
+                           title="Share on LinkedIn">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0A66C2" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="transition: all 0.3s ease;" onmouseover="this.style.transform='scale(1.2) translateX(5px)'; this.style.stroke='#084d96'" onmouseout="this.style.transform='scale(1) translateX(0)'; this.style.stroke='#0A66C2'">
+                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                                <rect x="2" y="9" width="4" height="12"/>
+                                <circle cx="4" cy="4" r="2"/>
+                            </svg>
+                        </a>
+                        
+                        <!-- Instagram -->
+                        <a href="https://www.instagram.com/top10calculators" 
+                           target="_blank" 
+                           rel="noopener noreferrer"
+                           style="text-decoration: none; display: block;"
+                           title="Follow on Instagram">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#E1306C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="transition: all 0.3s ease;" onmouseover="this.style.transform='scale(1.2) translateX(5px)'; this.style.stroke='#c41c5b'" onmouseout="this.style.transform='scale(1) translateX(0)'; this.style.stroke='#E1306C'">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                            </svg>
+                        </a>
+                    </div>
+
+
+                    <!-- Footer inline style -->
+                     <footer role="contentinfo" style="
+                        --function-bg: #3a5562;
+                        --text-white: white;
+                        --button-bg: #d8d0c0;
+                        --button-hover: #c8c0b0;
+                        
+                        background-color: var(--function-bg);
+                        color: var(--text-white);
+                        padding: 10px 0;
+                        margin-top: 5px;
+                        font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+                    ">
+                        <div style="
+                            max-width: 1200px;
+                            margin: 0 auto;
+                            display: grid;
+                            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                            gap: 60px;
+                            padding: 0 20px;
+                        ">
+                            <div style="
+                                display: flex;
+                                flex-direction: column;
+                            ">
+                                <h3 style="
+                                    color: var(--button-bg);
+                                    margin-bottom: 20px;
+                                    font-size: 18px;
+                                    font-weight: 600;
+                                ">Top 10 Calculators</h3>
+                               <p style="
+                                    color: #d8d0c0;
+                                    line-height: 1.3;
+                                    font-size: 15px;
+                                "> <strong>Disclaimer:</strong> The calculators on this site are provided for general informational purposes only. Results should be verified with qualified professionals. <br> <br>
+                                &copy; 2021-2025 top10calculators.com. All rights reserved.</p>
+                            </div>
+                     		
+                            <div style="
+                                display: flex;
+                                flex-direction: column;
+                            ">
+                                <h3 style="
+                                    color: var(--button-bg);
+                                    margin-bottom: 20px;
+                                    font-size: 18px;
+                                    font-weight: 600;
+                                ">Calculator Categories</h3>
+                                <ul style="
+                                    list-style: none;
+                                    margin: 0;
+                                    padding: 0;
+                                ">
+                                    <li style="margin-bottom: 10px;">
+                    		<a href="https://top10calculators.com/#calculator-categories" style="
+                        			color: var(--button-bg);
+                                            text-decoration: none;
+                                            transition: color 0.3s;
+                                            font-size: 15px;
+                                            display: inline-block;
+                                            padding: 4px 0;
+                                        " 
+                                        onmouseover="this.style.color='var(--button-hover)'"
+                                        onmouseout="this.style.color='var(--button-bg)'">
+                                            Mortgage & Finance
+                    		  </a>
+                                      </li>
+                    
+                                     <li style="margin-bottom: 10px;">
+                    		<a href="https://top10calculators.com/#calculator-categories" style="
+                        			color: var(--button-bg);
+                                            text-decoration: none;
+                                            transition: color 0.3s;
+                                            font-size: 15px;
+                                            display: inline-block;
+                                            padding: 4px 0;
+                                        " 
+                                        onmouseover="this.style.color='var(--button-hover)'"
+                                        onmouseout="this.style.color='var(--button-bg)'">
+                                            Health & Fitness
+                    		  </a>
+                                      </li>
+                    
+                    
+                                     <li style="margin-bottom: 10px;">
+                    		<a href="https://top10calculators.com/#calculator-categories" style="
+                        			color: var(--button-bg);
+                                            text-decoration: none;
+                                            transition: color 0.3s;
+                                            font-size: 15px;
+                                            display: inline-block;
+                                            padding: 4px 0;
+                                        " 
+                                        onmouseover="this.style.color='var(--button-hover)'"
+                                        onmouseout="this.style.color='var(--button-bg)'">
+                                            Math & Science
+                    		  </a>
+                                      </li>
+                    
+                    
+                                    <li style="margin-bottom: 10px;">
+                    		<a href="https://top10calculators.com/#calculator-categories" style="
+                        			color: var(--button-bg);
+                                            text-decoration: none;
+                                            transition: color 0.3s;
+                                            font-size: 15px;
+                                            display: inline-block;
+                                            padding: 4px 0;
+                                        " 
+                                        onmouseover="this.style.color='var(--button-hover)'"
+                                        onmouseout="this.style.color='var(--button-bg)'">
+                                            Life & Day-to-Day
+                    		  </a>
+                                      </li>
+                    
+                    
+                                </ul>
+                            </div>
+                    
+                            <div style="
+                                display: flex;
+                                flex-direction: column;
+                            ">
+                                <h3 style="
+                                    color: var(--button-bg);
+                                    margin-bottom: 10px;
+                                    font-size: 18px;
+                                    font-weight: 600;
+                                ">Quick Links</h3>
+                                <ul style="
+                                    list-style: none;
+                                    margin: 0;
+                                    padding: 0;
+                                ">
+                                    <li style="margin-bottom: 4px;">
+                                        <a href="https://top10calculators.com/index.html" style="
+                                            color: var(--button-bg);
+                                            text-decoration: none;
+                                            transition: color 0.3s;
+                                            font-size: 15px;
+                                            display: inline-block;
+                                            padding: 4px 0;
+                                        " 
+                                        onmouseover="this.style.color='var(--button-hover)'"
+                                        onmouseout="this.style.color='var(--button-bg)'">
+                                            Home
+                                        </a>
+                                    </li>
+                                    <li style="margin-bottom: 4px;">
+                                        <a href="https://top10calculators.com/aboutuscalc.html" style="
+                                            color: var(--button-bg);
+                                            text-decoration: none;
+                                            transition: color 0.3s;
+                                            font-size: 15px;
+                                            display: inline-block;
+                                            padding: 4px 0;
+                                        " 
+                                        onmouseover="this.style.color='var(--button-hover)'"
+                                        onmouseout="this.style.color='var(--button-bg)'">
+                                            About Us
+                                        </a>
+                                    </li>
+                                    <li style="margin-bottom: 4px;">
+                                        <a href="https://calculate.lt/" 
+                                           rel="noopener" 
+                                           style="
+                                            color: var(--button-bg);
+                                            text-decoration: none;
+                                            transition: color 0.3s;
+                                            font-size: 15px;
+                                            display: inline-block;
+                                            padding: 4px 0;
+                                        " 
+                                        onmouseover="this.style.color='var(--button-hover)'"
+                                        onmouseout="this.style.color='var(--button-bg)'">
+                                            Blog
+                                        </a>
+                                    </li>
+                                    <li style="margin-bottom: 4px;">
+                                        <a href="https://top10calculators.com/feedbackform.html" style="
+                                            color: var(--button-bg);
+                                            text-decoration: none;
+                                            transition: color 0.3s;
+                                            font-size: 15px;
+                                            display: inline-block;
+                                            padding: 4px 0;
+                                        " 
+                                        onmouseover="this.style.color='var(--button-hover)'"
+                                        onmouseout="this.style.color='var(--button-bg)'">
+                                            Contact
+                                        </a>
+                                    </li>
+                                    <li style="margin-bottom: 4px;">
+                                        <a href="https://top10calculators.com/privacypolicycalc.html" style="
+                                            color: var(--button-bg);
+                                            text-decoration: none;
+                                            transition: color 0.3s;
+                                            font-size: 15px;
+                                            display: inline-block;
+                                            padding: 4px 0;
+                                        " 
+                                        onmouseover="this.style.color='var(--button-hover)'"
+                                        onmouseout="this.style.color='var(--button-bg)'">
+                                            Privacy Policy
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    
+                       
+                    </footer>
+
+    <script>
+        // Set current date
+        document.getElementById('currentDate').textContent = new Date().toLocaleDateString('en-US', { 
+            year: 'numeric', 
+            month: 'long', 
+            day: 'numeric' 
+        });
+        
+        // Simple JavaScript for the page
+        document.addEventListener('DOMContentLoaded', function() {
+            // Highlight the current page in navigation
+            const currentPage = window.location.pathname.split('/').pop();
+            const navLinks = document.querySelectorAll('.footer-links a');
+            
+            navLinks.forEach(link => {
+                if (link.getAttribute('href') === currentPage) {
+                    link.style.fontWeight = 'bold';
+                    link.style.color = '#4a6572';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

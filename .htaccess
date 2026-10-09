@@ -1,0 +1,44 @@
+RewriteEngine On
+
+# 1. Fix specific redirect chains
+Redirect 301 /old-calculators/geometrycalc.html /calculators/geometrycalc.html
+Redirect 301 /old-calculators/fractioncalc.html /calculators/fractioncalc.html
+
+# 2. Force HTTP to HTTPS
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# 3. Force www to non-www (INSERTED HERE)
+RewriteCond %{HTTP_HOST} ^www\.top10calculators\.com [NC]
+RewriteRule ^(.*)$ https://top10calculators.com/$1 [L,R=301]
+
+# 4. Remove trailing slashes
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)/$ /$1 [L,R=301]
+
+
+
+
+
+
+
+
+
+
+
+# RewriteCond %{HTTP_HOST} ^www\.top10calculators\.com [NC]
+# RewriteRule ^(.*)$ https://top10calculators.com/$1 [L,R=301]
+
+
+# Fix redirect chains - ensure direct redirects
+# Redirect 301 /old-calculators/geometrycalc.html /calculators/geometrycalc.html
+# Redirect 301 /old-calculators/fractioncalc.html /calculators/fractioncalc.html
+# Add all your redirect mappings here
+
+# HTTP to HTTPS redirect
+# RewriteCond %{HTTPS} off
+# RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Remove trailing slashes
+# RewriteCond %{REQUEST_FILENAME} !-d
+# RewriteRule ^(.*)/$ /$1 [L,R=301]

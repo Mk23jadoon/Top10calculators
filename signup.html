@@ -1,0 +1,131 @@
+<?php
+header('Content-Type: application/json');
+
+// Database configuration
+$host = 'localhost';
+$dbname = 'u797284664_calculator';
+$username = 'u797284664_calc';
+$password = 'per5kilO.//99Akj';
+
+// WhatsApp Configuration - FREE CallMeBot
+$whatsapp_api_key = 'YOUR_CALLMEBOT_API_KEY';
+$whatsapp_number = '923135901213';
+
+// Response array
+$response = array('success' => false, 'message' => '');
+
+try {
+    // Create PDO connection
+    $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $username, $password);
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    
+    // Check if form is submitted
+    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+        // Get form data
+        $userData = [
+            'username' => trim($_POST['username']),
+            'email' => trim($_POST['email']),
+            'password' => $_POST['password'],
+            'firstName' => trim($_POST['firstName']),
+            'lastName' => trim($_POST['lastName']),
+            'phoneNumber' => !empty($_POST['phoneNumber']) ? trim($_POST['phoneNumber']) : null,
+            'dateOfBirth' => !empty($_POST['dateOfBirth']) ? $_POST['dateOfBirth'] : null,
+            'gender' => !empty($_POST['gender']) ? $_POST['gender'] : null
+        ];
+        
+        // Validate required fields
+        if (empty($userData['username']) || empty($userData['email']) || empty($userData['password']) || 
+            empty($userData['firstName']) || empty($userData['lastName'])) {
+            throw new Exception('All required fields must be filled.');
+        }
+        
+        // Validate email format
+        if (!filter_var($userData['email'], FILTER_VALIDATE_EMAIL)) {
+            throw new Exception('Invalid email format.');
+        }
+        
+        // Validate password strength
+        if (strlen($userData['password']) < 8) {
+            throw new Exception('Password must be at least 8 characters long.');
+        }
+        
+        // Check if username or email already exists
+        $stmt = $pdo->prepare("SELECT id FROM users WHERE username = ? OR email = ?");
+        $stmt->execute([$userData['username'], $userData['email']]);
+        if ($stmt->rowCount() > 0) {
+            throw new Exception('Username or email already exists.');
+        }
+        
+        // Hash password
+        $hashedPassword = password_hash($userData['password'], PASSWORD_DEFAULT);
+        
+        // Prepare SQL query
+        $sql = "INSERT INTO users (username, email, password_hash, first_name, last_name, 
+                phone_number, date_of_birth, gender, status) 
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?, 'pending')";
+        
+        $stmt = $pdo->prepare($sql);
+        $stmt->execute([
+            $userData['username'],
+            $userData['email'],
+            $hashedPassword,
+            $userData['firstName'],
+            $userData['lastName'],
+            $userData['phoneNumber'],
+            $userData['dateOfBirth'],
+            $userData['gender']
+        ]);
+        
+        $newUserId = $pdo->lastInsertId();
+        
+        $response['success'] = true;
+        $response['message'] = 'Registration successful! You can now log in.';
+        
+        // Send WhatsApp Notification for New Registration
+        $whatsapp_message = "🎉 *New User Registration* 🎉\n\n";
+        $whatsapp_message .= "🆔 *User ID:* " . $newUserId . "\n";
+        $whatsapp_message .= "👤 *Username:* " . $userData['username'] . "\n";
+        $whatsapp_message .= "📧 *Email:* " . $userData['email'] . "\n";
+        $whatsapp_message .= "👨‍💼 *Full Name:* " . $userData['firstName'] . " " . $userData['lastName'] . "\n";
+        
+        if (!empty($userData['phoneNumber'])) {
+            $whatsapp_message .= "📞 *Phone:* " . $userData['phoneNumber'] . "\n";
+        }
+        
+        if (!empty($userData['gender'])) {
+            $whatsapp_message .= "⚧️ *Gender:* " . ucfirst($userData['gender']) . "\n";
+        }
+        
+        if (!empty($userData['dateOfBirth'])) {
+            $whatsapp_message .= "🎂 *Date of Birth:* " . $userData['dateOfBirth'] . "\n";
+        }
+        
+        $whatsapp_message .= "🌐 *IP Address:* " . $_SERVER['REMOTE_ADDR'] . "\n";
+        $whatsapp_message .= "🕒 *Registration Time:* " . date('Y-m-d H:i:s') . "\n";
+        $whatsapp_message .= "📱 *Browser:* " . substr($_SERVER['HTTP_USER_AGENT'], 0, 50) . "...";
+        
+        sendWhatsAppNotification($whatsapp_message, $whatsapp_api_key, $whatsapp_number);
+    }
+} catch (PDOException $e) {
+    $response['message'] = 'Database error: ' . $e->getMessage();
+} catch (Exception $e) {
+    $response['message'] = $e->getMessage();
+}
+
+// Return JSON response
+echo json_encode($response);
+
+// WhatsApp Notification Function
+function sendWhatsAppNotification($message, $api_key, $phone_number) {
+    $url = "https://api.callmebot.com/whatsapp.php?phone=" . $phone_number . "&text=" . urlencode($message) . "&apikey=" . $api_key;
+    
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_URL, $url);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($ch, CURLOPT_TIMEOUT, 10);
+    $result = curl_exec($ch);
+    curl_close($ch);
+    
+    return $result;
+}
+?>

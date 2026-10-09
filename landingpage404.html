@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<meta name="google-adsense-account" content="ca-pub-2661173827213576">
+
+<link rel="preload" href="calculator.js" as="script">
+<link rel="preconnect" href="https://cdnjs.cloudflare.com">
+
+
+<title>Calculator Under Construction</title>
+<style>
+  :root {
+    /* Color Scheme */
+    --primary-bg: #fafaeb;
+    --container-bg: #e8e0d0;
+    --display-bg: #d0d0c8;
+    --button-bg: #d8d0c0;
+    --button-hover: #c8c0b0;
+    --operator-bg: #4a6572;
+    --operator-hover: #3a5562;
+    --function-bg: #3a5562;
+    --function-hover: #2a4552;
+    --clear-bg: rgb(216, 106, 38);
+    --clear-hover: rgb(187, 101, 51);
+    --ad-bg: linear-gradient(to right, #e0e0d8, #d0d0c8);
+    --ad-unit-bg: linear-gradient(to bottom, #f0f0e8, #e8e8e0);
+    --category-bg: linear-gradient(to bottom, #f5f5ed, #e8e8e0);
+
+    /* Text Colors */
+    --text-primary: #333;
+    --text-dark: #1a3a2a;
+    --text-medium: #3a5562;
+    --text-light: #7a7a72;
+    --text-white: white;
+
+    /* Borders */
+    --border-light: #d8d0c0;
+    --border-medium: #c8c0b0;
+    --border-dark: #8f8f75;
+
+    /* Sizes and Spacing */
+    --border-radius: 12px;
+    --border-radius-sm: 8px;
+    --shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    --shadow-sm: 0 4px 8px rgba(0, 0, 0, 0.08);
+  }
+
+  /* Reset */
+  * {
+    box-sizing: border-box;
+  }
+
+  body, html {
+    margin: 0; padding: 0; height: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--primary-bg);
+    color: var(--text-dark);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .page-wrapper {
+    max-width: 450px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+  }
+
+  .container {
+    background: var(--container-bg);
+    padding: 3rem 2.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: var(--operator-bg);
+  }
+
+  p {
+    font-size: 1.1rem;
+    margin: 1rem 0 0;
+    color: var(--text-primary);
+    line-height: 1.5;
+  }
+
+  .apology {
+    margin-top: 2rem;
+    font-style: italic;
+    color: var(--text-medium);
+  }
+
+ 
+
+  .btn-return {
+    display: inline-block;
+    background-color: var(--button-bg);
+    color: var(--text-dark);
+    border: 1.5px solid var(--border-medium);
+    padding: 0.5rem 1.2rem;
+    margin: 1rem 0;
+    border-radius: var(--border-radius-sm);
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+  }
+
+  .btn-return:hover,
+  .btn-return:focus {
+    background-color: var(--button-hover);
+    border-color: var(--border-dark);
+    outline: none;
+  }
+</style>
+</head>
+<body>
+  <div class="page-wrapper" role="main" aria-labelledby="pageTitle">
+    <a href="index.html" class="btn-return" aria-label="Return to main page - top button">Return</a>
+    <div class="container">
+      <h1 id="pageTitle">Calculator Under Construction</h1>
+      <p>
+        Thank you for visiting. This calculator is currently under construction and will be available soon.
+      </p>
+      <p class="apology">
+        We apologize for any inconvenience this may cause and appreciate your patience.
+      </p>
+      
+    </div>
+    <a href="index.html" class="btn-return" aria-label="Return to main page - bottom button">Return</a>
+  </div>
+  
+    <!-- SVG Icons Version - No External Dependencies -->
+                    <div style="
+                        position: fixed;
+                        top: 70%;
+                        left: 2px;
+                        transform: translateY(-50%);
+                        display: flex;
+                        flex-direction: column;
+                        gap: 20px;
+                        padding: 5px 5px;
+                        z-index: 1000;
+                        background: white;
+                        border-radius: 0 15px 15px 0;
+                        box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+                        border: 1px solid #e5e7eb;
+                        border-left: none;
+                    ">
+                        
+                        <!-- Twitter -->
+                        <a href="https://twitter.com/intent/tweet?url=https://top10calculators.com/" 
+                           target="_blank" 
+                           rel="noopener noreferrer"
+                           style="text-decoration: none; display: block;"
+                           title="Share on Twitter">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1DA1F2" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="transition: all 0.3s ease;" onmouseover="this.style.transform='scale(1.2) translateX(5px)'; this.style.stroke='#0d8bd9'" onmouseout="this.style.transform='scale(1) translateX(0)'; this.style.stroke='#1DA1F2'">
+                                <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/>
+                            </svg>
+                        </a>
+                        
+                        <!-- Facebook -->
+                        <a href="https://www.facebook.com/sharer/sharer.php?u=https://top10calculators.com/" 
+                           target="_blank" 
+                           rel="noopener noreferrer"
+                           style="text-decoration: none; display: block;"
+                           title="Share on Facebook">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#3b5998" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="transition: all 0.3s ease;" onmouseover="this.style.transform='scale(1.2) translateX(5px)'; this.style.stroke='#2d4373'" onmouseout="this.style.transform='scale(1) translateX(0)'; this.style.stroke='#3b5998'">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+                            </svg>
+                        </a>
+                        
+                        <!-- LinkedIn -->
+                        <a href="https://www.linkedin.com/shareArticle?url=https://top10calculators.com/" 
+                           target="_blank" 
+                           rel="noopener noreferrer"
+                           style="text-decoration: none; display: block;"
+                           title="Share on LinkedIn">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0A66C2" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="transition: all 0.3s ease;" onmouseover="this.style.transform='scale(1.2) translateX(5px)'; this.style.stroke='#084d96'" onmouseout="this.style.transform='scale(1) translateX(0)'; this.style.stroke='#0A66C2'">
+                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                                <rect x="2" y="9" width="4" height="12"/>
+                                <circle cx="4" cy="4" r="2"/>
+                            </svg>
+                        </a>
+                        
+                        <!-- Instagram -->
+                        <a href="https://www.instagram.com/top10calculators" 
+                           target="_blank" 
+                           rel="noopener noreferrer"
+                           style="text-decoration: none; display: block;"
+                           title="Follow on Instagram">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#E1306C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="transition: all 0.3s ease;" onmouseover="this.style.transform='scale(1.2) translateX(5px)'; this.style.stroke='#c41c5b'" onmouseout="this.style.transform='scale(1) translateX(0)'; this.style.stroke='#E1306C'">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                            </svg>
+                        </a>
+                    </div>
+
+
+                    <!-- Footer inline style -->
+                     <footer role="contentinfo" style="
+                        --function-bg: #3a5562;
+                        --text-white: white;
+                        --button-bg: #d8d0c0;
+                        --button-hover: #c8c0b0;
+                        
+                        background-color: var(--function-bg);
+                        color: var(--text-white);
+                        padding: 10px 0;
+                        margin-top: 5px;
+                        font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+                    ">
+                        <div style="
+                            max-width: 1200px;
+                            margin: 0 auto;
+                            display: grid;
+                            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                            gap: 60px;
+                            padding: 0 20px;
+                        ">
+                            <div style="
+                                display: flex;
+                                flex-direction: column;
+                            ">
+                                <h3 style="
+                                    color: var(--button-bg);
+                                    margin-bottom: 20px;
+                                    font-size: 18px;
+                                    font-weight: 600;
+                                ">Top 10 Calculators</h3>
+                               <p style="
+                                    color: #d8d0c0;
+                                    line-height: 1.3;
+                                    font-size: 15px;
+                                "> <strong>Disclaimer:</strong> The calculators on this site are provided for general informational purposes only. Results should be verified with qualified professionals. <br> <br>
+                                &copy; 2021-2025 top10calculators.com. All rights reserved.</p>
+                            </div>
+                     		
+                            <div style="
+                                display: flex;
+                                flex-direction: column;
+                            ">
+                                <h3 style="
+                                    color: var(--button-bg);
+                                    margin-bottom: 20px;
+                                    font-size: 18px;
+                                    font-weight: 600;
+                                ">Calculator Categories</h3>
+                                <ul style="
+                                    list-style: none;
+                                    margin: 0;
+                                    padding: 0;
+                                ">
+                                    <li style="margin-bottom: 10px;">
+                    		<a href="https://top10calculators.com/#calculator-categories" style="
+                        			color: var(--button-bg);
+                                            text-decoration: none;
+                                            transition: color 0.3s;
+                                            font-size: 15px;
+                                            display: inline-block;
+                                            padding: 4px 0;
+                                        " 
+                                        onmouseover="this.style.color='var(--button-hover)'"
+                                        onmouseout="this.style.color='var(--button-bg)'">
+                                            Mortgage & Finance
+                    		  </a>
+                                      </li>
+                    
+                                     <li style="margin-bottom: 10px;">
+                    		<a href="https://top10calculators.com/#calculator-categories" style="
+                        			color: var(--button-bg);
+                                            text-decoration: none;
+                                            transition: color 0.3s;
+                                            font-size: 15px;
+                                            display: inline-block;
+                                            padding: 4px 0;
+                                        " 
+                                        onmouseover="this.style.color='var(--button-hover)'"
+                                        onmouseout="this.style.color='var(--button-bg)'">
+                                            Health & Fitness
+                    		  </a>
+                                      </li>
+                    
+                    
+                                     <li style="margin-bottom: 10px;">
+                    		<a href="https://top10calculators.com/#calculator-categories" style="
+                        			color: var(--button-bg);
+                                            text-decoration: none;
+                                            transition: color 0.3s;
+                                            font-size: 15px;
+                                            display: inline-block;
+                                            padding: 4px 0;
+                                        " 
+                                        onmouseover="this.style.color='var(--button-hover)'"
+                                        onmouseout="this.style.color='var(--button-bg)'">
+                                            Math & Science
+                    		  </a>
+                                      </li>
+                    
+                    
+                                    <li style="margin-bottom: 10px;">
+                    		<a href="https://top10calculators.com/#calculator-categories" style="
+                        			color: var(--button-bg);
+                                            text-decoration: none;
+                                            transition: color 0.3s;
+                                            font-size: 15px;
+                                            display: inline-block;
+                                            padding: 4px 0;
+                                        " 
+                                        onmouseover="this.style.color='var(--button-hover)'"
+                                        onmouseout="this.style.color='var(--button-bg)'">
+                                            Life & Day-to-Day
+                    		  </a>
+                                      </li>
+                    
+                    
+                                </ul>
+                            </div>
+                    
+                            <div style="
+                                display: flex;
+                                flex-direction: column;
+                            ">
+                                <h3 style="
+                                    color: var(--button-bg);
+                                    margin-bottom: 10px;
+                                    font-size: 18px;
+                                    font-weight: 600;
+                                ">Quick Links</h3>
+                                <ul style="
+                                    list-style: none;
+                                    margin: 0;
+                                    padding: 0;
+                                ">
+                                    <li style="margin-bottom: 4px;">
+                                        <a href="https://top10calculators.com/index.html" style="
+                                            color: var(--button-bg);
+                                            text-decoration: none;
+                                            transition: color 0.3s;
+                                            font-size: 15px;
+                                            display: inline-block;
+                                            padding: 4px 0;
+                                        " 
+                                        onmouseover="this.style.color='var(--button-hover)'"
+                                        onmouseout="this.style.color='var(--button-bg)'">
+                                            Home
+                                        </a>
+                                    </li>
+                                    <li style="margin-bottom: 4px;">
+                                        <a href="https://top10calculators.com/aboutuscalc.html" style="
+                                            color: var(--button-bg);
+                                            text-decoration: none;
+                                            transition: color 0.3s;
+                                            font-size: 15px;
+                                            display: inline-block;
+                                            padding: 4px 0;
+                                        " 
+                                        onmouseover="this.style.color='var(--button-hover)'"
+                                        onmouseout="this.style.color='var(--button-bg)'">
+                                            About Us
+                                        </a>
+                                    </li>
+                                    <li style="margin-bottom: 4px;">
+                                        <a href="https://calculate.lt/" 
+                                           rel="noopener" 
+                                           style="
+                                            color: var(--button-bg);
+                                            text-decoration: none;
+                                            transition: color 0.3s;
+                                            font-size: 15px;
+                                            display: inline-block;
+                                            padding: 4px 0;
+                                        " 
+                                        onmouseover="this.style.color='var(--button-hover)'"
+                                        onmouseout="this.style.color='var(--button-bg)'">
+                                            Blog
+                                        </a>
+                                    </li>
+                                    <li style="margin-bottom: 4px;">
+                                        <a href="https://top10calculators.com/feedbackform.html" style="
+                                            color: var(--button-bg);
+                                            text-decoration: none;
+                                            transition: color 0.3s;
+                                            font-size: 15px;
+                                            display: inline-block;
+                                            padding: 4px 0;
+                                        " 
+                                        onmouseover="this.style.color='var(--button-hover)'"
+                                        onmouseout="this.style.color='var(--button-bg)'">
+                                            Contact
+                                        </a>
+                                    </li>
+                                    <li style="margin-bottom: 4px;">
+                                        <a href="https://top10calculators.com/privacypolicycalc.html" style="
+                                            color: var(--button-bg);
+                                            text-decoration: none;
+                                            transition: color 0.3s;
+                                            font-size: 15px;
+                                            display: inline-block;
+                                            padding: 4px 0;
+                                        " 
+                                        onmouseover="this.style.color='var(--button-hover)'"
+                                        onmouseout="this.style.color='var(--button-bg)'">
+                                            Privacy Policy
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    
+                       
+                    </footer>
+  
+</body>
+</html>
